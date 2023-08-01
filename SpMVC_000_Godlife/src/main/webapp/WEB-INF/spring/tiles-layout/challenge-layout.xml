@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC
+  "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+  "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+  
+<tiles-definitions>
+	<definition name="/challenge/*" extends="default">
+		<put-attribute name="main-content" value="/WEB-INF/views/challenge/{1}.jsp"/>
+	</definition>
+	
+	<definition name="challengeTest/*" extends="default2">
+		<put-attribute name="main-content" value="/WEB-INF/views/challengeTest/{1}.jsp"/>
+	</definition>
+</tiles-definitions>

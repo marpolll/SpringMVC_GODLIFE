@@ -1,0 +1,213 @@
+@charset "UTF-8";
+.search_box {
+  box-sizing: content-box;
+  /* position: absolute;
+  top: 150px;
+  left: 50%;
+  transform: translate(-50%, -50%); */
+  background-color: #575757;
+  height: 40px;
+  border-radius: 40px;
+  padding: 10px;
+  width: 50%;
+  margin: 100px auto;
+}
+/* .search_box:hover .search_txt {
+  width: 240px;
+  padding: 0 6px;
+}
+.search_box:hover .search_btn {
+  background-color: white;
+} */
+.search_btn_box {
+  background-color: transparent;
+  border: none;
+}
+.search_btn {
+  color: #575757;
+  float: right;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.4s;
+  text-decoration: none;
+  cursor: pointer;
+}
+.search_txt {
+  border: none;
+  background: none;
+  outline: none;
+  float: left;
+  padding: 0;
+  color: white;
+  font-size: 16px;
+  transition: 0.4s;
+  line-height: 40px;
+  width: 90%;
+  padding: 0 6px;
+}
+.search_txt:-webkit-autofill,
+.search_txt:-webkit-autofill:hover,
+.search_txt:-webkit-autofill:focus,
+.search_txt:-webkit-autofill:active {
+  transition: background-color 5000s;
+  -webkit-text-fill-color: #fff !important;
+}
+
+.phone_size {
+  position: relative;
+  /* display: none; */
+  /* border: 1px solid black; */
+  height: 600px;
+  width: 1000px;
+  margin: 0 auto 0;
+  top: 20%;
+}
+
+div.share.container {
+  /* border: 1px solid black; */
+  width: 100%;
+}
+
+.share_box {
+  /* border: 1px solid #e4dffd; */
+  position: relative;
+  background-color: #e4dffd;
+  display: flex;
+  border-radius: 20px;
+  width: 60%;
+  height: 170px;
+  /* text-align: center; */
+  margin: 0 auto 30px;
+  padding: 10px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+.profile_lv {
+  /* border: 1px solid black; */
+  background-color: gray;
+  position: absolute;
+  left: 50%;
+  top: -40px;
+  transform: translate(-50%, 0%);
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  padding: 10px 10px;
+  font-size: 50px;
+  line-height: 50px;
+}
+div.share.content,
+div.share.profile {
+  height: 100%;
+  /* border: 1px solid black; */
+  display: flex;
+  flex-direction: column;
+}
+
+div.share.profile {
+  flex: 2;
+}
+div.share.content {
+  flex: 9;
+}
+
+.profile_img {
+  position: relative;
+  width: 100%;
+  flex: 3;
+}
+.profile_img img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.profile_text {
+  flex: 1;
+  /* padding: 5px 0; */
+  text-align: left;
+  line-height: 35px;
+}
+.profile_text div {
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.share_box .mession {
+  position: relative;
+  border: 1px solid skyblue;
+  width: 90%;
+  height: 40px;
+  background-color: #ecf2ff;
+  margin: 10px auto;
+  padding-left: 7px;
+  line-height: 40px;
+  color: black;
+  font-size: 1.5rem;
+}
+div.mession span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+div.share.content div {
+  flex: 1;
+}
+div.share.content div.text {
+  width: 90%;
+  margin: 20px auto 0;
+  font-size: 1.5rem;
+  text-align: left;
+}
+
+/* 
+.profile_text div:nth-of-type(1) {
+  height: 30px;
+  padding-left: 10px;
+  font-size: 25px;
+  font-weight: 700;
+}
+.profile_text div:nth-of-type(2) {
+  font-size: 17px;
+  height: 40px;
+  padding-left: 10px;
+} */
+div.share.achieve {
+  display: flex;
+}
+div.share.achieve div {
+  flex: 1;
+}
+.share_box .Attainment {
+  /* border: 1px solid red; */
+  display: flex;
+  height: 60px;
+}
+.Attainment div {
+  flex: 1;
+  text-align: center;
+  padding: 5px 2px;
+}
+.Attainment_star {
+  text-align: center;
+  font-size: 12px;
+  line-height: 40px;
+}
+.share_box .good_btn {
+  /* border: 1px solid red; */
+  display: flex;
+  width: 40px;
+  height: 40px;
+  font-size: 40px;
+  margin: 0 auto;
+}

@@ -1,0 +1,35 @@
+@charset "UTF-8";
+
+div.main {
+  width: 80%;
+  margin: 5px auto;
+}
+
+div.pagination ul {
+  list-style: none;
+  display: flex;
+}
+
+div.pagination li {
+  padding: 5px;
+  margin: 2px;
+  border: 1px solid rgb(140, 140, 230);
+  border-radius: 3px;
+}
+
+div.pagination li.active {
+  background-color: rgb(134, 134, 214);
+  color: white;
+}
+
+div.challenge.search input {
+  height: 33px;
+  font-size: 17px;
+}
+
+div.challenge.search button {
+  width: 33px;
+  height: 32px;
+  border-radius: 10px;
+  background-color: bisque;
+}

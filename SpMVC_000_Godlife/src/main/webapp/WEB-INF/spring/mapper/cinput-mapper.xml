@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+ <mapper namespace="com.godlife.app.dao.CInputDao">
+ 	
+ <select id="selectAll">
+ 	SELECT c_seq,
+			   c_uemail,
+			   c_title,
+			   c_memo,	
+			   c_sdate,
+			   c_edate,
+			   IFNULL(c_achieve,(TIMESTAMPDIFF(DAY , c_sdate, c_edate)+1))AS c_achieve,
+			   c_count,
+			   c_share,
+			   c_useyn,
+		       u_nickname, 
+		       ROUND((c_count / (TIMESTAMPDIFF(DAY , c_sdate, c_edate)+1))*5) AS star
+		  FROM tbl_challenge
+		  LEFT JOIN tbl_user 
+		    ON c_uemail = u_email
+		 WHERE c_useyn = 'Y'
+		   AND c_uemail = #{u_email}
+ </select>	
+ 	
+ <insert id="cinsert">
+ 
+insert into tbl_challenge
+ (c_uemail ,c_title, c_write, c_sdate, c_edate, 
+ c_achieve, c_count, c_memo, c_share, c_useyn
+)values 
+(#{c_uemail} ,#{c_title}, #{c_write}, #{c_sdate}, #{c_edate},
+#{c_achieve}, #{c_count}, #{c_memo}, 'Y', 'Y')
+ 
+ </insert>
+ 
+ 	<update id="update">
+
+		UPDATE tbl_challenge
+		SET  
+		c_uemail = #{c_uemail} ,
+		c_title = #{c_title}, 
+		c_write = #{c_write}, 
+		c_sdate = #{c_sdate}, 
+		c_edate = #{c_edate}, 
+ 		c_achieve = #{c_achieve}, 
+ 		c_count = #{c_count}, 
+ 		c_memo = #{c_memo}, 
+ 		c_share = #{c_share},
+ 		c_useyn = #{c_useyn}
+		WHERE c_seq = #{c_seq}
+
+	</update>
+	
+	
+	
+	<select id="selectSearchCount">
+	
+	SELECT COUNT(*) FROM tbl_challenge
+	WHERE
+		<foreach collection="list" item="S" separator=" OR ">
+			c_title LIKE CONCAT ('%', #{S}, '%')
+		</foreach>
+		
+	</select>
+	
+	<select id="selectSearchPage">
+
+	SELECT * FROM tbl_challenge
+	WHERE
+		<foreach collection="list" item="S" separator=" OR ">
+			c_title LIKE CONCAT ('%', #{S}, '%')
+		</foreach>
+		LIMIT #{limit} OFFSET #{offset}
+	</select>
+ 	
+ </mapper> 

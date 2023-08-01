@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+ <mapper namespace="com.godlife.app.dao.MemberDao">
+ 	
+ 	<select id="findById">
+ 		SELECT COUNT(*)
+		  FROM tbl_user
+		 WHERE u_email = #{u_email}
+ 	</select>
+ 	
+ 	<select id="pwCheck">
+ 		SELECT COUNT(*)
+		  FROM tbl_user
+		 WHERE u_email = #{u_email}
+		   AND u_password = #{u_password} 
+		   AND u_useyn = 'Y'
+ 	</select>
+ 	
+ 	<insert id="joinSave">
+ 		INSERT
+ 		  INTO tbl_user(u_email,u_password,u_name,u_nickname,u_tel,u_birth,u_auth,u_useyn)
+ 		VALUES(#{u_email}, #{u_password}, #{u_name}, #{u_nickname}, #{u_tel}, #{u_birth},'U','Y')
+ 	</insert>
+ 	
+ 	<select id="findIdByTel">
+ 		SELECT COUNT(*)
+		  FROM tbl_user
+		 WHERE u_tel = #{tel}
+		   AND u_useyn = 'Y';
+ 	</select>
+ 	
+ </mapper> 

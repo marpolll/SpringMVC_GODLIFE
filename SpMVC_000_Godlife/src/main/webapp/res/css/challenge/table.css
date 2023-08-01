@@ -1,0 +1,75 @@
+@charset "UTF-8";
+
+table {
+  width: 50%;
+  margin: 10px auto;
+  border-collapse: collapse;
+}
+
+table.challenge.list th {
+  border-top: 1px solid #fff7ee;
+}
+
+table.challenge.list tr:nth-of-type(odd) {
+  background-color: #e3dffd;
+}
+
+table.challenge.list tr:nth-of-type(even) {
+  background-color: #f8f1ff;
+}
+
+table.challenge.list tr:first-of-type {
+  background-color: #fdedc2;
+}
+
+table.challenge.list tr:hover {
+  background-color: #fff7ee;
+  cursor: pointer;
+}
+
+table.challenge.list th,
+table.challenge.list td {
+  text-align: left;
+  padding: 5px 8px;
+  border-bottom: 1px solid #fff7ee;
+  border-right: 1px solid #fff7ee;
+}
+
+table.challenge.list th:last-of-type,
+table.challenge.list td:last-of-type {
+  border-right: none;
+}
+
+table.schedule.list th {
+  border-top: 1px solid #fff7ee;
+}
+
+table.schedule.list tr:nth-of-type(odd) {
+  background-color: #e3dffd;
+}
+
+table.schedule.list tr:nth-of-type(even) {
+  background-color: #f8f1ff;
+}
+
+table.schedule.list tr:first-of-type {
+  background-color: #fdedc2;
+}
+
+table.schedule.list tr:hover {
+  background-color: #fff7ee;
+  cursor: pointer;
+}
+
+table.schedule.list th,
+table.schedule.list td {
+  text-align: left;
+  padding: 5px 8px;
+  border-bottom: 1px solid #fff7ee;
+  border-right: 1px solid #fff7ee;
+}
+
+table.schedule.list th:last-of-type,
+table.schedule.list td:last-of-type {
+  border-right: none;
+}

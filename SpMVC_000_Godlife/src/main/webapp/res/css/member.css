@@ -1,0 +1,242 @@
+@charset "UTF-8";
+
+.title {
+  /* border: 1px solid black; */
+  line-height: 250px;
+  /* height: 250px; */
+  font-size: 130px;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+.contain {
+  /* border: 1px solid red; */
+  height: 280px;
+}
+.contain_box {
+  position: relative;
+  /* border: 1px solid blue; */
+  width: 100%;
+  height: 70px;
+  margin-bottom: 10px;
+}
+.login_input {
+  border: 1px solid #b2b2b2;
+  border-radius: 10px;
+  width: 450px;
+  height: 60px;
+  padding-left: 10px;
+  font-size: 25px;
+  transition: 0.2s;
+  outline: none;
+}
+.login_input:focus {
+  border-color: #2ecc71;
+  transition: 0.2s;
+}
+.login_button {
+  border: 0px solid black;
+  border-radius: 10px;
+  background-color: #f5f0bb;
+  width: 450px;
+  height: 60px;
+  font-size: 25px;
+  margin: 0 auto;
+  line-height: 60px;
+}
+.login_button:hover {
+  box-shadow: 2px 2px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.msg_box {
+  display: none;
+  height: 40px;
+  padding: 7px;
+}
+.msg_div {
+  width: 550px;
+  height: 50px;
+  margin-left: 280px;
+  text-align: left;
+  font-size: 25px;
+  display: none;
+}
+
+h2 {
+  font-size: 4em;
+  font-weight: 20px;
+  text-align: center;
+  display: block;
+  line-height: 1em;
+  /* margin-left: 100px; */
+  padding-bottom: 1em;
+  padding-top: 50px;
+  color: #575757;
+  background-color: #fff7ee;
+  /* position: fixed; */
+}
+.container th h1 {
+  margin-left: 10px;
+  font-weight: bold;
+  font-size: 1em;
+  text-align: center;
+  width: 40px;
+  color: #575757;
+}
+
+.container td {
+  font-weight: normal;
+  font-size: 1em;
+  -webkit-box-shadow: 0 2px 2px -2px #0e1119;
+  -moz-box-shadow: 0 2px 2px -2px #0e1119;
+  box-shadow: 0 2px 2px -2px #0e1119;
+}
+
+.container {
+  /* border: 1px solid black; */
+  text-align: center;
+  font-size: 20px;
+  overflow: hidden;
+  width: 60%;
+  margin: 0 auto;
+  display: table;
+  padding: 0 0 4em 0;
+  margin-right: 200px;
+}
+
+.container td,
+.container th {
+  padding: 2%;
+}
+
+/* Background-color of the odd rows */
+.container tr:nth-child(odd) {
+  background-color: #f8f1ff;
+}
+
+/* Background-color of the even rows */
+.container tr:nth-child(even) {
+  background-color: #2c3446;
+}
+
+.container th {
+  background-color: #fdefc2;
+}
+
+.container td:first-child {
+  color: red;
+}
+.container td:last-child {
+  color: blue;
+}
+
+.container tr:hover {
+  background-color: #e3dffd;
+  -webkit-box-shadow: 0 6px 6px -6px #0e1119;
+  -moz-box-shadow: 0 6px 6px -6px #0e1119;
+  box-shadow: 0 6px 6px -6px #0e1119;
+}
+
+.container td:hover {
+  background-color: #ecf2ff;
+  color: #403e10;
+  font-weight: bold;
+
+  box-shadow: #f8f1ff -1px 1px, #f8f1ff -2px 2px, #f8f1ff -3px 3px,
+    #f8f1ff -4px 4px, #f8f1ff -5px 5px, #f8f1ff -6px 6px;
+  transform: translate3d(6px, -6px, 0);
+
+  transition-delay: 0s;
+  transition-duration: 0.4s;
+  transition-property: all;
+  transition-timing-function: line;
+}
+
+.anchor_box {
+  font-size: 25px;
+}
+.anchor {
+  display: inline-block;
+  width: 150px;
+}
+
+.title div {
+  /* border: 1px solid #b2b2b2; */
+  background-color: #ecf2ff;
+  padding: 10px;
+  margin: 100px auto 0;
+  border-radius: 10px;
+  width: 450px;
+  height: 60px;
+  font-size: 25px;
+  line-height: normal;
+  font-weight: 700;
+}
+
+.icon-box {
+  position: absolute;
+  left: 210px;
+  padding: 10px 5px;
+  line-height: 30px;
+  width: 55px;
+  height: 60px;
+  font-size: 40px;
+}
+
+.modal {
+  border: 2px solid black;
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  z-index: 100;
+}
+
+.header_box {
+  /* border: 1px solid #b2b2b2; */
+  background-color: #ecf2ff;
+  padding: 12px 5px;
+  display: inline-block;
+  border-radius: 10px;
+  width: 450px;
+  height: 60px;
+  text-align: center;
+  font-weight: 700;
+  font-size: 25px;
+}
+
+.check_btn {
+  position: absolute;
+  background-color: #f5f0bb;
+  width: 100px;
+  height: 60px;
+  top: 0px;
+  right: 160px;
+  padding: 12px 5px;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 25px;
+}
+
+.check_btn:hover {
+  box-shadow: 2px 2px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.contain .contain_box:nth-of-type(1) {
+  /* height: 40px; */
+}
+
+.msg_box {
+  /* border: 1px solid blue; */
+  height: 40px;
+  padding: 7px;
+}
+
+#findId_login,
+#findPw_login {
+  display: none;
+}

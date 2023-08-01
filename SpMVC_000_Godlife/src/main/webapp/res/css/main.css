@@ -1,0 +1,239 @@
+@charset "UTF-8";
+@font-face {
+  font-family: Nanum Seongsirce;
+  src: url(/app/res/doc/font.ttf);
+  font-weight: bold;
+}
+* {
+  font-family: Nanum Seongsirce;
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+html {
+  width: 100vw;
+  height: 100vh;
+}
+body {
+  width: 100%;
+  height: 89%;
+  text-align: center;
+  background-color: #fff7ee;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+.phone_size {
+  position: relative;
+  /* border: 1px solid black; */
+  /* height: 600px; */
+  width: 1000px;
+  margin: 0px auto;
+}
+fieldset {
+  border: none;
+}
+
+.side_bar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  /* border: 1px solid black; */
+  background-color: #e3dffd;
+  width: 250px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
+}
+.side_bar a {
+  line-height: normal;
+}
+.side_top {
+  /* border: 1px solid blue; */
+  height: 200px;
+  font-size: 45px;
+  line-height: 200px;
+  text-align: center;
+}
+#godlife {
+  /* position: absolute; */
+  /* top: 5%; */
+  /* left: 50%; */
+  /* transform: translate(-50%, 0%); */
+  font-size: 40px;
+  cursor: pointer;
+}
+/*사이드 메뉴*/
+.side_menu {
+  /* border: 1px solid red; */
+  padding: 20px 0;
+}
+.inner_smenu > ul > li {
+  margin: 20px;
+  transition: 0.5s;
+  text-align: center;
+  list-style-type: none;
+}
+.inner_smenu > ul > li > a {
+  display: block;
+  padding: 15px 5px;
+  font-size: 25px;
+  /* color: #f1f1f1; */
+  color: black;
+  text-transform: uppercase;
+  /*transition: .5s;*/
+  text-shadow: 0 0 5px #ccc;
+}
+.inner_smenu > ul > li > a:hover {
+  /* color: skyblue;
+     border-left: 3px solid #d4f4fa; */
+  color: darkgray;
+  border-left: 3px solid darkgray;
+  /* background-color: #d4f4fa; */
+  /*border-radius: 10px; */
+}
+
+/*sns버튼*/
+.sfooter {
+  /* border: 1px solid red; */
+  margin-top: 120px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.sns_btn {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background-color: #333;
+  margin: 5px;
+  border-radius: 30%;
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 0 4px 20px 0 rgba(0, 0, 0, 0.19);
+  /*color:#FAF4C0;*/
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+}
+.sns_btn i {
+  line-height: 40px;
+  font-size: 25px;
+  transition: 0.2s linear;
+}
+.sns_btn:hover i {
+  transform: scale(1.5);
+  color: #eee;
+}
+.sns_btn:before {
+  content: "";
+  position: absolute;
+  width: 120%;
+  height: 120%;
+  transform: rotate(45deg);
+  left: -110%;
+  top: 90%;
+}
+.sns_btn:hover:before {
+  animation: sns_hover 0.7s 1;
+  top: -10%;
+  left: -10%;
+}
+@keyframes sns_hover {
+  0% {
+    left: -100%;
+    top: 90%;
+  }
+  50% {
+    left: 10%;
+    top: -30%;
+  }
+  100% {
+    left: -10%;
+    top: -10%;
+  }
+}
+#insta {
+  color: #bd24a9;
+  background-color: white;
+}
+#facebook {
+  color: #4374d9;
+  background-color: white;
+}
+#youtube {
+  color: #ff0000;
+  background-color: white;
+}
+#line {
+  color: #1fbc02;
+  background-color: white;
+}
+
+#insta:before {
+  content: "";
+  position: absolute;
+  width: 120%;
+  height: 120%;
+  background-color: #bd24a9;
+  transform: rotate(45deg);
+  left: -120%;
+  top: 80%;
+}
+#insta:hover:before {
+  animation: sns_hover 0.7s 1;
+  top: -10%;
+  left: -10%;
+}
+#facebook:before {
+  content: "";
+  position: absolute;
+  width: 120%;
+  height: 120%;
+  background-color: #4374d9;
+  transform: rotate(45deg);
+  left: -120%;
+  top: 80%;
+}
+#facebook:hover:before {
+  animation: sns_hover 0.7s 1;
+  top: -10%;
+  left: -10%;
+}
+#youtube:before {
+  content: "";
+  position: absolute;
+  width: 120%;
+  height: 120%;
+  background-color: #ff0000;
+  transform: rotate(45deg);
+  left: -120%;
+  top: 80%;
+}
+#youtube:hover:before {
+  animation: sns_hover 0.7s 1;
+  top: -10%;
+  left: -10%;
+}
+#line:before {
+  content: "";
+  position: absolute;
+  width: 120%;
+  height: 120%;
+  background-color: #1fbc02;
+  transform: rotate(45deg);
+  left: -120%;
+  top: 80%;
+}
+#line:hover:before {
+  animation: sns_hover 0.7s 1;
+  top: -10%;
+  left: -10%;
+}
+
+.pick_page,
+.test {
+  color: #102770;
+  box-shadow: 0 8px 24px 0 rgba(16, 39, 112, 0.2);
+}
